@@ -1,3 +1,4 @@
+
 package com.vrms.backend;
 
 import jakarta.persistence.*;
@@ -25,12 +26,16 @@ public class Customer {
     @Column(name="Address")
     private String address;
 
+    @Column(name="Password_Hash",nullable=true)
+    private String passwordHash;
+
     public Integer getCustomerId(){return customerId;}
     public String getName(){return name;}
     public String getEmail(){return email;}
     public String getPhone(){return phone;}
     public String getLicenceNo(){return licenceNo;}
     public String getAddress(){return address;}
+    public String getPasswordHash(){return passwordHash;}
 
     public void setCustomerId(Integer customerId){this.customerId=customerId;}
     public void setName(String name){this.name=name;}
@@ -38,4 +43,5 @@ public class Customer {
     public void setPhone(String phone){this.phone=phone;}
     public void setLicenceNo(String licenceNo){this.licenceNo=licenceNo;}
     public void setAddress(String address){this.address=address;}
+    public void setPasswordHash(String passwordHash){this.passwordHash=passwordHash;}
 }
